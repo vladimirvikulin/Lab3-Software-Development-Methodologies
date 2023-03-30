@@ -7,8 +7,9 @@ router = APIRouter()
 def hello_world() -> dict:
     return {
         'student': 'Vikulin Volodymyr',
-        'group': 'IM-11',
-        'Country': 'Ukraine',
         'City': 'Kyiv',
-        'University': 'KPI'
+        'University': 'KPI',
+        'Faculty': 'FIOT',
+        'group': 'IM-11',
+        'Birthday': '15.04.2004'
     }
