@@ -1,6 +1,4 @@
-FROM python:3.11.2-alpine
-
-RUN apk add --no-cache lapack-dev g++ gcc musl-dev 
+FROM python:3.11.2-bullseye
 
 WORKDIR /app
 
