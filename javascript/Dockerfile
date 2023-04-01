@@ -1,4 +1,4 @@
-FROM node:18.15.0 as builder
+FROM node:latest as builder
 
 WORKDIR /app
 
@@ -10,8 +10,8 @@ ENV NODE_ENV=production
 
 COPY index.js /app/
 
-FROM astefanutti/scratch-node
+FROM gcr.io/distroless/nodejs
 
 COPY --from=builder /app /
 
-ENTRYPOINT  ["node", "index.js", "--port=8080"]
+CMD ["index.js", "--port=8080"]
